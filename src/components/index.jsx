@@ -7,6 +7,7 @@ import DataRetriever from './data/index.js'
 const mainService = document.querySelector('#carousel-service');
 const similarService = document.querySelector('#similar-service');
 
+
 DataRetriever(data => {
   let {
     images,
