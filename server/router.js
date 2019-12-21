@@ -7,5 +7,7 @@ router.route('/poster')
   .post(controllers.post)
 router.route('/put')
   .put(controllers.put)
-
+router.route('/delete')
+  .delete(controllers.delete)
+  
   module.exports = router

@@ -2,7 +2,7 @@ const db = require('./newSeed.js')
 
 
 //   db.connect()
-async function dexter ({body},cb) {
+async function poster ({body},cb) {
     try{
         console.log('connected succesfully attempting post request')
         console.log(body)
@@ -16,10 +16,9 @@ catch(ex) {
 }
 
 finally {
-    // await db.end()
     console.log('client disconnected great success')
 }
 
 }
 
-module.exports = dexter
+module.exports = poster

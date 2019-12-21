@@ -2,7 +2,7 @@ const db = require('./newSeed.js')
 
 async function putter ({body},cb) {
     try{
-        console.log('connected succesfully attempting post request')
+        console.log('connected succesfully attempting put request')
         await db.query(`UPDATE listings SET rooms = 5000 WHERE listingid = 2`)
         .then((result) => cb(null,result))
         .catch((err) => cb(err))
@@ -18,4 +18,5 @@ finally {
 }
 
 }
+
 module.exports = putter
