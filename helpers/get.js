@@ -3,7 +3,7 @@ const db = require('./newSeed.js')
 
         db.connect()
     //gets all transcation information along with budget information based off the transactions category id
-    async function execute ({id},cb) {
+    async function getter ({id},cb) {
         try{
             console.log('connected succesfully attempting get request')
             await db.query(`SELECT * FROM listings WHERE listingid = ${id}`)
@@ -23,5 +23,5 @@ const db = require('./newSeed.js')
 
 
 
-module.exports = execute
+module.exports = getter
 
