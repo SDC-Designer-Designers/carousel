@@ -8,7 +8,11 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon server/app.js",
-    "seed": "node helpers/seed.js",
+    "seed": "node helpers/newSeed.js",
+    "stressGet": "ab -n 1000 -c  100 -k  http://localhost:3001/carousel-service/7",
+    "stressPost": "ab -p /Users/ariakesh/carousel/helpers/data.json -T application/json -c 100 -n1000 http://localhost:3001/poster",
+    "stressPut": "ab -u /Users/ariakesh/carousel/helpers/data.json -T application/json -c 100 -n1000 http://localhost:3001/put",
+    "stressDelete": "ab -m DELETE -c 100 -n1000 http://localhost:3001/delete",
     "sass": "sass --watch src/assets/sass:dist",
     "build": "webpack -d --watch"
   },

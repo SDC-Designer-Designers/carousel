@@ -4,8 +4,6 @@ const db = require('./newSeed.js')
 //   db.connect()
 async function poster ({body},cb) {
     try{
-        console.log('connected succesfully attempting post request')
-        console.log(body)
         await db.query(`INSERT INTO listings (rooms) values (299)`)
         .then((result) => cb(null,result))
         .catch((err) => cb(err))
