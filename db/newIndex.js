@@ -6,8 +6,8 @@
 // })
 
 // db.connect()
-
-// db.query('CREATE TABLE listing (listingID SERIAL PRIMARY KEY,images TEXT[],rooms INT,occupancy INT,reviews INT,ratings INT,locashun VARCHAR(300),price INT);', (err,res) => {
+// db.query(`DROP TABLE listings IF EXISTS`)
+// db.query('CREATE TABLE listings (listingID SERIAL PRIMARY KEY,images TEXT[],rooms INT,occupancy INT,reviews INT,ratings INT,price INT, similar text[]);', (err,res) => {
 //     if(err){
 //         console.log(err)
 //     }

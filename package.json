@@ -7,7 +7,8 @@
   "author": "Steve McLaughlin <stevejrmc@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server/app.js",
+    "start": "node server/app.js",
+    "generate": "node helpers/dataGen.js",
     "seed": "node helpers/newSeed.js",
     "stressGet": "ab -n 1000 -c  100 -k  http://localhost:3001/carousel-service/7",
     "stressPost": "ab -p /Users/ariakesh/carousel/helpers/data.json -T application/json -c 100 -n1000 http://localhost:3001/poster",
@@ -26,6 +27,8 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "json2csv": "^4.5.4",
+    "jsonexport": "^2.4.1",
     "mongoose": "^5.7.13",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.1",
