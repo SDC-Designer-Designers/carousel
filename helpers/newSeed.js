@@ -25,7 +25,7 @@ async function execute(){
             })
             console.log('connected succesfully')
             let rooms = randomNum(5) + 1;
-            await db.query(`COPY listings from '/Users/ariakesh/carousel/helpers/infoo.csv' `)
+            await db.query(`COPY listings from '/Users/ariakesh/carousel/infoo.csv' `)
             
             .then((res) => console.log('succesfully inserted records'))
             .catch((err) => console.log(err, "error"))
