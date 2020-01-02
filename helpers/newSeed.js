@@ -1,5 +1,5 @@
 const {Client} = require('pg')
-const connectString = 'postgressql://ariakesh@ec2-34-207-230-4.compute-1.amazonaws.com:5432/ariakesh'
+const connectString = 'postgressql://postgres@ec2-34-207-230-4.compute-1.amazonaws.com:5432/ariakesh'
 const db = new Client({
     connectionString:connectString
 });
