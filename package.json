@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node server/app.js",
-    "generate": "node helpers/dataGen.js",
+    "generate": "node helpers/dataGen.js > infoo.csv",
     "seed": "node helpers/newSeed.js",
     "stressGet": "ab -n 1000 -c  100 -k  http://localhost:3001/carousel-service/7",
     "stressPost": "ab -p /Users/ariakesh/carousel/helpers/data.json -T application/json -c 100 -n1000 http://localhost:3001/poster",
