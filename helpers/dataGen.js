@@ -29,7 +29,7 @@ const getStr = string => {
 
 const forLoop = async _ => {
   bar1.start(2500000, 0);
-  for(var i = 1; i <  10 + 1; i++){
+  for(var i = 1; i <  2500000 + 1; i++){
     bar1.update(i)
     let room = randomNum(5) + 1;
     var str = `${i}	{https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))},https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))},https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))},https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))},https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))},https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))},https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))},https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))},https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))},https://unsplash.it/500/500?image=${randomNum(800+randomNum(100))}}	${room}	${room * 2}	${randomNum(200)}	${randomNum(100)}	${randomNum(600)}	{${randomNum(1000)},${randomNum(1000)},${randomNum(1000)},${randomNum(1000)},${randomNum(1000)}} `
