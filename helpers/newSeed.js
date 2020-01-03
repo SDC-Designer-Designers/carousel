@@ -1,4 +1,5 @@
 const {Client} = require('pg')
+const path = require('path')
 const connectString = 'postgressql://ariakesh:shawdy123@localhost:5432/ariakesh'
 const db = new Client({
     connectionString:connectString
@@ -25,7 +26,7 @@ async function execute(){
             })
             console.log('connected succesfully')
             let rooms = randomNum(5) + 1;
-            await db.query(`COPY listings from '/home/ubuntu/carousel/infoo.csv' `)
+            await db.query(`COPY listings from '${path.resolve('../carousel/infoo.csv')}' `)
             
             .then((res) => console.log('succesfully inserted records'))
             .catch((err) => console.log(err, "error"))
