@@ -9,6 +9,9 @@
   "scripts": {
     "start": "node server/app.js",
     "generate": "node --max-old-space-size=5120 helpers/dataGen.js > infoo.csv",
+    "generate2": "node --max-old-space-size=5120 helpers/dataGen2.js > infoo2.csv",
+    "generate3": "node --max-old-space-size=5120 helpers/dataGen3.js > infoo3.csv",
+    "generate4": "node --max-old-space-size=5120 helpers/dataGen4.js > infoo4.csv",
     "seed": "node helpers/newSeed.js",
     "stressGet": "ab -n 1000 -c  100 -k  http://localhost:3001/carousel-service/7",
     "stressPost": "ab -p /Users/ariakesh/carousel/helpers/data.json -T application/json -c 100 -n1000 http://localhost:3001/poster",
