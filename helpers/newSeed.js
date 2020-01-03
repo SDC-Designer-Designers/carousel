@@ -32,10 +32,10 @@ async function execute(){
             .then((res) => console.log('succesfully inserted 2nd set records'))
             .catch((err) => console.log(err, "error"))
             await db.query(`COPY listings from '${path.resolve('../carousel/infoo3.csv')}' `)
-            .then((res) => console.log('succesfully inserted 3rd set records'))
+            .then((res) => console.log('succesfully inserted 3rd set of records'))
             .catch((err) => console.log(err, "error"))
             await db.query(`COPY listings from '${path.resolve('../carousel/infoo4.csv')}' `)
-            .then((res) => console.log('succesfully inserted 4th set records'))
+            .then((res) => console.log('succesfully inserted 4th set of records'))
             .catch((err) => console.log(err, "error"))
     }
     catch (ex) {
