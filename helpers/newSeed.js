@@ -14,23 +14,29 @@ async function execute(){
     try{
         await db.connect()
         db.query(`DROP TABLE IF EXISTS listings`)
-        .then((res) => console.log('listings destroyed'))
+        .then((res) => console.log('listings table dropped'))
         .catch((err) => console.log(err,'error dropping table listings'))
 
-        db.query('CREATE TABLE listings ( listingID SERIAL PRIMARY KEY,images varchar[],rooms INT,occupancy INT,reviews INT,ratings INT,price INT,similars integer[]);', (err,res) => {
+        db.query('CREATE TABLE listings ( listingID INT,images varchar[],rooms INT,occupancy INT,reviews INT,ratings INT,price INT,similars integer[]);', (err,res) => {
             if(err){
                 console.log(err,'error creating table ')
             }
-            else console.log("table listings created")
+            else console.log("listings table created")
 
             })
             console.log('connected succesfully')
-            let rooms = randomNum(5) + 1;
             await db.query(`COPY listings from '${path.resolve('../carousel/infoo.csv')}' `)
-            
-            .then((res) => console.log('succesfully inserted records'))
+            .then((res) => console.log('succesfully inserted 1st set of records'))
             .catch((err) => console.log(err, "error"))
-        
+            await db.query(`COPY listings from '${path.resolve('../carousel/infoo2.csv')}' `)
+            .then((res) => console.log('succesfully inserted 2nd set records'))
+            .catch((err) => console.log(err, "error"))
+            await db.query(`COPY listings from '${path.resolve('../carousel/infoo3.csv')}' `)
+            .then((res) => console.log('succesfully inserted 3rd set records'))
+            .catch((err) => console.log(err, "error"))
+            await db.query(`COPY listings from '${path.resolve('../carousel/infoo4.csv')}' `)
+            .then((res) => console.log('succesfully inserted 4th set records'))
+            .catch((err) => console.log(err, "error"))
     }
     catch (ex) {
         console.log(`someting wong ${ex}`)

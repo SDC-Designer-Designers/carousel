@@ -3,8 +3,8 @@ const bar1 = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
 const randomNum = max => {
   return Math.floor(Math.random() * max);
   }
-  bar1.start(2500000, 0);
-for(var i = 1; i <  2500000 + 1; i++){
+  bar1.start(1e7, 0);
+for(var i = 7500001 + 1; i <  1e7 + 1; i++){
  
   bar1.update(i)
   let room = randomNum(5) + 1;
