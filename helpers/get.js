@@ -1,4 +1,8 @@
-const db = require('./newSeed.js')
+const {Client} = require('pg')
+const connectString = 'postgressql://ariakesh:shawdy123@localhost:5432/ariakesh'
+const db = new Client({
+    connectionString:connectString
+});
 
 
         db.connect()
