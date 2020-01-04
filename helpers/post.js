@@ -1,7 +1,9 @@
-const db = require('./newSeed.js')
-
-
-//   db.connect()
+const {Client} = require('pg')
+const connectString = 'postgressql://ariakesh:shawdy123@localhost:5432/ariakesh'
+const db = new Client({
+    connectionString:connectString
+});
+  db.connect()
 async function poster ({body},cb) {
     try{
         await db.query(`INSERT INTO listings (rooms) values (299)`)
