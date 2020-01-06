@@ -1,12 +1,13 @@
 const {Client} = require('pg')
 const path = require('path')
-const connectString = 'postgressql://ariakesh:shawdy123@localhost:5432/ariakesh'
+const connectString = require('./dbConfig.js')
+
 const db = new Client({
     connectionString:connectString
 });
+
 execute()
 async function execute(){
- 
     try{
         await db.connect()
         console.log(`connected succesfully to ${connectString}`)
@@ -19,7 +20,7 @@ async function execute(){
         await db.query(`CREATE UNIQUE INDEX ids ON listings (listingID);`)
         .then((res) => console.log('created unique index on column listingID'))
         .catch((err) => console.log(err))
-            await db.query(`COPY listings from '${path.resolve('../carousel/10M.csv')}' `)
+            await db.query(`COPY listings from '${path.resolve('../carousel/10m.csv')}' `)
             .then((res) => console.log('succesfully inserted records'))
             .catch((err) => console.log(err, "error"))
     }
