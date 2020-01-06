@@ -7,7 +7,6 @@
   "author": "Steve McLaughlin <stevejrmc@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "gen": "concurrently --kill-others \"npm run generate\" \"npm run generate2\"  \"npm run generate3\" \"npm run generate4\" \"npm run generate5\" \"npm run generate6\" \"npm run generate7\"  \"npm run generate8\" \"npm run generate9\" \"npm run generate10\"",
     "start": "node server/app.js",
     "generate": "node  helpers/generate.js",
     "seed": "node helpers/newSeed.js",

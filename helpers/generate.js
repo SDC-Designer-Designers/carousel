@@ -4,12 +4,12 @@ const fs = require('fs')
 
 const colors = require('colors')
 const count = 1e7 + 1
-const file = path.resolve('../10m.csv')
+const file = path.resolve('../carousel/10m.csv')
 if (fs.existsSync(file)) fs.unlinkSync(file)
-const bar = new cliProgress.SingleBar({
-  format: `progress |${colors.cyan(
-    '{bar}'
-  )}| {percentage}% | {total} / {value} | {duration}s  `,
+  const bar = new cliProgress.SingleBar({
+    format: `progress |${colors.cyan(
+      '{bar}'
+    )}| {percentage}% | {total} / {value} | {duration}s  `,
   barCompleteChar: `\u2588`,
   barIncompleteChar: '.'
 })
@@ -23,7 +23,7 @@ stream.on('close', () => {
 })
 const randomNum = max => {
     return Math.floor(Math.random() * max);
-    }
+  }
 let i = 0
 write()
 function write() {

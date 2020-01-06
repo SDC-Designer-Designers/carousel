@@ -10,5 +10,6 @@ router.route('/put')
 router.route('/delete')
   .delete(controllers.delete)
   
-  module.exports = router
+
+module.exports = router
 

@@ -1,5 +1,5 @@
 const {Client} = require('pg')
-const connectString = 'postgressql://ariakesh:shawdy123@localhost:5432/ariakesh'
+const connectString = require('./dbConfig.js')
 const db = new Client({
     connectionString:connectString
 });
@@ -20,7 +20,7 @@ const db = new Client({
     }
     finally {
         // await db.end()
-        console.log('client disconnected great success')
+        // console.log('client disconnected great success')
     }
 
 }
