@@ -10,9 +10,9 @@
     "start": "node server/app.js",
     "generate": "node  helpers/generate.js",
     "seed": "node helpers/newSeed.js",
-    "stressGet": "ab -n 1000 -c  100 -k  http://localhost:3005/carousel-service/7",
-    "stressPost": "ab -p /Users/ariakesh/carousel/helpers/data.json -T application/json -c 100 -n1000 http://localhost:3005/poster",
-    "stressPut": "ab -u /Users/ariakesh/carousel/helpers/data.json -T application/json -c 100 -n1000 http://localhost:3005/put",
+    "stressGet": "ab -n 1000 -c  100 -k  http://3.80.36.141:3005/carousel-service/4",
+    "stressPost": "ab -p /home/ubuntu/carousel/helpers/data.json -T application/json -c 100 -n1000 http://3.80.36.141:3005/poster",
+    "stressPut": "ab -u /Users/ariakesh/carousel/helpers/data.json -T application/json -c 100 -n1000 http://3.80.36.141:3005/put",
     "stressDelete": "ab -m DELETE -c 100 -n1000 http://localhost:3005/delete",
     "sass": "sass --watch src/assets/sass:dist",
     "build": "webpack -d --watch"

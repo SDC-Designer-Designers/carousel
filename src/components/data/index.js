@@ -30,7 +30,7 @@ const DataRetriever = (cb) => {
     })
     .catch(err =>console.error(err))
 };
-console.log('poopxs')
+
 // const getSimilar = (ids, cb) => {
 //   const retrieveSimilar = id => axios.get(`/carousel-service/${id}`);
 //   let similar = ids.map(id => retrieveSimilar(id));
