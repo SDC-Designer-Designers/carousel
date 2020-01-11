@@ -9,7 +9,7 @@ const db = new Client({
     //gets all transcation information along with budget information based off the transactions category id
     async function getter ({id},cb) {
         try{
-            console.log('connected succesfully attempting get request')
+            // console.log('connected succesfully attempting get request')
             await db.query(`SELECT * FROM listings WHERE listingid = ${id}`)
             .then((result) => cb(null,result))
             .catch((err) => cb(err))
